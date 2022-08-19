@@ -780,3 +780,16 @@ modal styles
 .modal-form button:active {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3) inset;
 }
+
+/* ----------
+-------------
+kontakt styles 
+-------------
+-------------*/
+.in-progress {
+  height: calc(100vh - 80px - 241px);
+  background-image: url(../images/work-in-progress.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 30vh 30vh;
+}
