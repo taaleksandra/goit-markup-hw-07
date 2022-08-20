@@ -555,7 +555,11 @@ modal styles
 ------------
 ------------ 
 */
-
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
 .backdrop {
   background-color: hsla(0, 0%, 0%, 0.1);
   position: fixed;
@@ -570,6 +574,10 @@ modal styles
   transition: transform 250ms linear, opacity 250ms linear,
     visibility 250ms linear;
 }
+.is-hidden > .modal {
+  transform: scaleX(0);
+}
+
 .modal {
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -578,8 +586,7 @@ modal styles
   padding: 8px 8px 40px 8px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.close-btn {
+.modal__close-btn {
   background-color: hsla(0, 0%, 100%, 1);
   border: 1px solid hsla(0, 0%, 0%, 0.1);
   border-radius: 50%;
@@ -592,24 +599,17 @@ modal styles
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-btn:hover {
+.modal__close-btn:hover {
   background-color: var(--descriptions-color);
   color: var(--white-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-.close-btn:active {
+.modal__close-btn:active {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3) inset;
 }
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
 
-.is-hidden > .modal {
-  transform: scaleX(0);
-}
-.modal h3 {
+
+.modal__form-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -617,26 +617,30 @@ modal styles
   letter-spacing: 0.03em;
   color: #212121;
 }
-.modal-form {
+.modal__form {
   padding-top: 12px;
   padding-left: 32px;
   padding-right: 32px;
 }
-.modal-form-boxes {
+.modal__form-box {
   display: block;
   margin-bottom: 10px;
+  position: relative;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form span {
+
+
+.modal__form-box-info {
   display: block;
   font-size: 12px;
   line-height: 1.666;
   letter-spacing: 0.01em;
   color: var(--descriptions-color);
 }
-.modal-form-input {
+.modal__form-input {
   display: block;
   height: 40px;
-  width: 448px;
+  width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
@@ -645,23 +649,20 @@ modal styles
   padding: 12px 42px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form label {
-  position: relative;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-form label:focus-within {
+
+.modal__form-box:focus-within {
   fill: var(--accent-color);
 }
-.modal-form-input:focus-within {
+.modal__form-input:focus-within {
   border-color: var(--accent-color);
 }
-.modal-form-icon {
+.modal__form-icon {
   position: absolute;
   top: 27px;
   left: 8px;
   transform: translate(25%, 25%);
 }
-.modal-form-text-input {
+.modal__form-txt-area {
   resize: none;
   height: 120px;
   width: 448px;
@@ -674,24 +675,26 @@ modal styles
   outline: none;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form-text-input::placeholder {
+.modal__form-txt-area::placeholder {
   font-size: 12px;
   line-height: 1.166;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.modal-form-text-input:focus-within {
+.modal__form-txt-area:focus-within {
   border-color: var(--accent-color);
 }
-.form-checkbox-box {
+
+
+.checkbox {
   display: flex;
   margin-bottom: 30px;
   margin-top: 20px;
 }
-.modal-form-checkbox {
+.checkbox__label {
   cursor: pointer;
 }
-.modal-form-checkbox span::before {
+.checkbox__label::before {
   display: inline-block;
   vertical-align: middle;
   content: "";
@@ -703,28 +706,30 @@ modal styles
   margin-left: 14px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-checkbox-box input {
+.checkbox__input {
   appearance: none;
 }
-.form-checkbox-box input:checked + .modal-form-checkbox span::before {
+.checkbox__input:checked + .checkbox__label::before {
   border: none;
   background-image: url(../images/icon-check.svg);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.modal-form-checkbox span {
+.checkbox__info {
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: var(--descriptions-color);
   padding: 0;
 }
-.form-checkbox-box:hover .modal-form-checkbox span::before {
+.checkbox:hover .checkbox__label::before {
   border-color: var(--accent-color);
 }
-.modal-form-links {
+.checkbox__link {
   color: var(--accent-color);
 }
-.modal-form button {
+
+
+.checkbox__btn {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -740,17 +745,17 @@ modal styles
   color: var(--white-color);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form button:hover {
+.checkbox__btn:hover {
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-.modal-form button:active {
+.checkbox__btn:active {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3) inset;
 }
 
 /* ----------
 -------------
-kontakt styles 
+in progress styles
 -------------
 -------------*/
 .in-progress {
