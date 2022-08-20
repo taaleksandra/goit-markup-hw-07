@@ -1,0 +1,22 @@
+.container__client {
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $clientLogoColor;
+    border-radius: 4px;
+    fill: $clientLogoColor;
+    transition-property: fill border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:active {
+            border: 1px solid $accentColor;
+            fill: $accentColor;
+            cursor: pointer;
+        }
+}
+
+

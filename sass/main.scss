@@ -10,7 +10,7 @@
 
 .body {
   font-family: "Roboto", "Raleway", sans-serif;
-  color: var(--main-color);
+  color: $mainColor;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -57,3 +57,5 @@
 @import 'components/main-about';
 @import 'components/main-work';
 @import 'components/main-team';
+@import 'components/main-clients';
+@import 'components/main-modal';
