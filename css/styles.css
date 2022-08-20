@@ -299,13 +299,22 @@ main-page main styles
 }
 
 
-.container-main-second-list {
+.list {
   list-style: none;
   display: flex;
   gap: 30px;
+  font-size: 0;
+}
+.container__caption {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  vertical-align: top;
+  padding-bottom: 50px;
 }
 
-.container-main-second-list div {
+
+.about-container {
   display: flex;
   width: 270px;
   height: 120px;
@@ -315,46 +324,36 @@ main-page main styles
   border-radius: 4px;
   margin-bottom: 30px;
 }
-.container-main-second-list h3 {
+.about-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.15;
   text-transform: uppercase;
   letter-spacing: 0.25px;
+  padding-bottom: 10px;
 }
-.container-main-second-list p {
+.about-description {
   font-size: 14px;
   line-height: 1.7;
   color: var(--descriptions-color);
   letter-spacing: 0.25px;
 }
-.container-main-third {
+
+
+.container-work {
   padding-top: 0px;
 }
-.container-main-third ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  font-size: 0;
-}
-.container-caption {
-  font-weight: 700;
-  font-size: 36px;
-  text-align: center;
-  vertical-align: top;
-  padding-bottom: 50px;
-}
-.container-main-third li {
+.container-work__item {
   position: relative;
 }
-.container-main-third-background {
+.container-work__caption-background {
   background-color: #2f303acc;
   width: 100%;
   position: absolute;
   top: 224px;
   z-index: 1;
 }
-.container-main-third-background p {
+.container-work__caption {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1721;
@@ -365,14 +364,12 @@ main-page main styles
   padding-top: 27px;
   padding-bottom: 27px;
 }
+
+
 .container-team {
   background-color: var(--background-light-color);
 }
-.container-team ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
+
 .container-team figcaption > ul {
   display: flex;
   gap: 10px;
