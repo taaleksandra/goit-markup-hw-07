@@ -1,0 +1,22 @@
+.logo {
+    text-decoration: none;
+    font-family: "Raleway";
+    font-size: 26px;
+    font-weight: 700;
+
+    &--margin {
+        margin: 24px 93px 25px 0;
+    }
+
+    &--first {
+        color: $accentColor;
+    }
+
+    &--second-header {
+        color: $blackColor;
+    }
+
+    &--second-footer {
+        color: $whiteColor;
+    }
+}

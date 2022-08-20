@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --main-color: #212121;
   --accent-color: #2196f3;
   --descriptions-color: #757575;
@@ -40,14 +40,14 @@
 
 .body--shadow {
   box-shadow: 0px 0px 7px -2px rgb(172, 172, 175);
-}
+} */
 
 /* ----------
 -------------
 header styles 
 -------------
 -------------*/
-
+/* 
 .site-bar-wrapper {
   background-color: var(--white-color);
   border-bottom: 1px solid #ececec;
@@ -121,7 +121,7 @@ header styles
   left: 0;
   bottom: 0;
   right: 0;
-}
+} */
 
 /* ----------
 -------------
@@ -129,7 +129,7 @@ footer styles
 -------------
 ------------- */
 
-.footer-wrapper {
+/* .footer-wrapper {
   background-color: var(--background-dark-color);
   padding-top: 60px;
   padding-bottom: 60px;
@@ -139,11 +139,11 @@ footer styles
 }
 .footer-column {
   margin-right: 70px;
-}
-.logo--second-footer {
+} */
+/* .logo--second-footer {
   color: var(--white-color);
-}
-.address-footer {
+} */
+/* .address-footer {
   color: var(--white-color);
   font-style: normal;
   font-size: 14px;
@@ -247,7 +247,7 @@ footer styles
 .footer-column__form-btn-icon {
   margin-left: 24px;
   fill: var(--white-color);
-}
+} */
 
 /* ------------------
 ---------------------
@@ -299,7 +299,7 @@ main-page main styles
 }
 
 
-.list {
+/* .list {
   list-style: none;
   display: flex;
   gap: 30px;
@@ -311,7 +311,7 @@ main-page main styles
   text-align: center;
   vertical-align: top;
   padding-bottom: 50px;
-}
+} */
 
 
 .about-container {
@@ -758,10 +758,10 @@ modal styles
 in progress styles
 -------------
 -------------*/
-.in-progress {
+/* .in-progress {
   height: calc(100vh - 80px - 241px);
   background-image: url(../images/work-in-progress.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 30vh 30vh;
-}
+} */
