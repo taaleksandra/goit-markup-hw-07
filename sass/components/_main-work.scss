@@ -1,0 +1,27 @@
+.container-work {
+    padding-top: 0px;
+
+    &__item {
+            position: relative;
+    }
+
+    &__caption-background {
+        background-color: #2f303acc;
+        width: 100%;
+        position: absolute;
+        top: 224px;
+        z-index: 1;
+    }
+
+    &__caption {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.1721;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $whiteColor;
+        padding-top: 27px;
+        padding-bottom: 27px;
+    }
+}

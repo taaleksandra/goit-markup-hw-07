@@ -277,4 +277,56 @@
 }
 .main-banner__button:active {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3) inset;
+}
+
+.about-container {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(250deg, 38%, 97%);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.about-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0.25px;
+  padding-bottom: 10px;
+}
+
+.about-description {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #757575;
+  letter-spacing: 0.25px;
+}
+
+.container-work {
+  padding-top: 0px;
+}
+.container-work__item {
+  position: relative;
+}
+.container-work__caption-background {
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 100%;
+  position: absolute;
+  top: 224px;
+  z-index: 1;
+}
+.container-work__caption {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1721;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-top: 27px;
+  padding-bottom: 27px;
 }/*# sourceMappingURL=main.css.map */
