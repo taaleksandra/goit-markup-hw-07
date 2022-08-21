@@ -12,25 +12,25 @@
     margin-right: 70px;
 
     &__title {
-            font-weight: 700;
-            font-size: 14px;
-            font-style: normal;
-            line-height: 1.1428;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-            color: $whiteColor;
-            display: block;
-            padding-bottom: 20px;
-            padding-top: 12px;
+        font-weight: 700;
+        font-size: 14px;
+        font-style: normal;
+        line-height: 1.1428;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $whiteColor;
+        display: block;
+        padding-bottom: 20px;
+        padding-top: 12px;
     }
 
     &__list {
         display: flex;
         list-style: none;
-    }
 
-    &__list--icons-gap {
-    gap: 10px;
+        &--icons-gap {
+            gap: 10px;
+        }
     }
 
     &__social-icons {
@@ -45,12 +45,12 @@
         transition-property: background-color;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
 
-    &__social-icons:hover,
-    &__social-icons:active {
-        cursor: pointer;
-        background-color: $accentColor;
+        &:hover,
+        &:active {
+            cursor: pointer;
+            background-color: $accentColor;
+        }
     }
 
     &__form-input {
@@ -63,13 +63,13 @@
         border: 1px solid rgba(255, 255, 255, 0.3);
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
         color: $whiteColor;
-    }
 
-    &__form-input::placeholder {
-        font-size: 16px;
-        line-height: 1.25;
-        letter-spacing: 0.03em;
-        color: rgba(255, 255, 255, 0.6);
+        &::placeholder {
+            font-size: 16px;
+            line-height: 1.25;
+            letter-spacing: 0.03em;
+            color: rgba(255, 255, 255, 0.6);
+        }
     }
 
     &__form-btn {
@@ -108,18 +108,20 @@
     letter-spacing: 0.25px;
 
     &--margin {
-            margin-top: 20px;
+        margin-top: 20px;
     }
+    
     &__link {
         text-decoration: none;
         color: #ffffff99;
         transition-property: color;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    &__link:hover, 
-    &__link:focus {
-        color: $accentColor;
+
+        &:hover,
+        &:focus {
+            color: $accentColor;
+        }
     }
 }
 

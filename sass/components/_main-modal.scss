@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: center;
     transition: transform 250ms linear, opacity 250ms linear,
-        visibility 250ms linear;
+    visibility 250ms linear;
 }
 
 .is-hidden>.modal {
@@ -25,34 +25,33 @@
 
 .modal {
     background-color: $whiteColor;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     padding: 8px 8px 40px 8px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &__close-btn {
-            background-color: hsla(0, 0%, 100%, 1);
-            border: 1px solid hsla(0, 0%, 0%, 0.1);
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            display: block;
-            margin-left: auto;
-            cursor: pointer;
-            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: hsla(0, 0%, 100%, 1);
+        border: 1px solid hsla(0, 0%, 0%, 0.1);
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: block;
+        margin-left: auto;
+        cursor: pointer;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-            &:hover {
-                    background-color: $descriptionColor;
-                    color: $whiteColor;
-                    box-shadow: $hoverBtnShadow;
-            }
+        &:hover {
+            background-color: $descriptionColor;
+            color: $whiteColor;
+            box-shadow: $hoverBtnShadow;
+        }
 
-            &:active {
-                box-shadow: $activeBtnShadow;
-            }
+        &:active {
+            box-shadow: $activeBtnShadow;
+        }
     }
 
     &__form-title {
@@ -77,8 +76,8 @@
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
         &:focus-within {
-                fill: $accentColor;
-            }
+            fill: $accentColor;
+        }
     }
 
     &__form-box-info {
@@ -102,8 +101,8 @@
         transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
         &:focus-within {
-                border-color: $accentColor;
-            }
+            border-color: $accentColor;
+        }
     }
 
     &__form-icon {
@@ -127,11 +126,11 @@
         transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
         &::placeholder {
-                font-size: 12px;
-                line-height: 1.166;
-                letter-spacing: 0.01em;
-                color: rgba(117, 117, 117, 0.5);
-            }
+            font-size: 12px;
+            line-height: 1.166;
+            letter-spacing: 0.01em;
+            color: rgba(117, 117, 117, 0.5);
+        }
 
         &:focus-within {
             border-color: $accentColor;
@@ -163,12 +162,12 @@
 
     &__input {
         appearance: none;
-    }
 
-    &__input:checked+&__label::before {
-        border: none;
-        background-image: url(../images/icon-check.svg);
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        &:checked + .checkbox__label::before {
+            border: none;
+            background-image: url(../images/icon-check.svg);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
     }
 
     &__info {

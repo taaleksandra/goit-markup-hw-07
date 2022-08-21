@@ -2,15 +2,7 @@
     padding-top: 0px;
 
     &__item {
-            position: relative;
-    }
-
-    &__caption-background {
-        background-color: #2f303acc;
-        width: 100%;
-        position: absolute;
-        top: 224px;
-        z-index: 1;
+        position: relative;
     }
 
     &__caption {
@@ -23,5 +15,13 @@
         color: $whiteColor;
         padding-top: 27px;
         padding-bottom: 27px;
+
+        &-background {
+            background-color: #2f303acc;
+            width: 100%;
+            position: absolute;
+            top: 224px;
+            z-index: 1;
+        }
     }
 }

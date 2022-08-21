@@ -12,50 +12,51 @@
     align-items: center;
 
     &__link {
-            text-decoration: none;
-            color: $mainColor;
-            font-weight: 500;
-            font-size: 14px;
-            letter-spacing: 0.5px;
-            margin-right: 46px;
-            position: relative;
-            transition-property: color fill;
-            transition-duration: 250ms;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        }
-    &__link--active::after {
-        content: "";
-        background-color: $accentColor;
-        border-radius: 2px;
-        height: 4px;
-        position: absolute;
-        top: 45px;
-        left: 0;
-        bottom: 0;
-        right: 0;
-    }
+        text-decoration: none;
+        color: $mainColor;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        margin-right: 46px;
+        position: relative;
+        transition-property: color fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+        &:hover,
+        &:focus {
+            color: $accentColor;
+            fill: $accentColor;
+        }
+
+        &--active::after {
+            content: "";
+            background-color: $accentColor;
+            border-radius: 2px;
+            height: 4px;
+            position: absolute;
+            top: 45px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        &--contact {
+            color: $descriptionColor;
+            margin-right: 50px;
+            fill: $descriptionColor;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+            
+        &[href="kontakt.html"],
+        &[href="tel:+48111111111"] {
+            margin-right: 0;
+        }
+    }
+    
     &--contact {
         margin-left: auto;
-    }
-
-    &__link--contact {
-        color: $descriptionColor;
-        margin-right: 50px;
-        fill: $descriptionColor;
-        display: flex;
-        gap: 10px;
-        align-items: center;
-    }
-
-    &__link[href="kontakt.html"],
-    &__link[href="tel:+48111111111"] {
-         margin-right: 0;
-     }
-
-    &__link:hover,
-    &__link:focus {
-         color: $accentColor;
-         fill: $accentColor;
-     }
+    } 
 } 

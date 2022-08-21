@@ -1,22 +1,20 @@
 .main-banner {
     background-color: $backgroundDarkColor;
-    background-image: linear-gradient(hsla(235, 10%, 21%, 0.4),
-            hsla(235, 10%, 21%, 0.4)),
-        url(../images/back-ground-img.jpg);
+    background-image: linear-gradient(hsla(235, 10%, 21%, 0.4), hsla(235, 10%, 21%, 0.4)), url(../images/back-ground-img.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 200px;
     padding-bottom: 200px;
 
     &__caption {
-            color: $whiteColor;
-            font-weight: 900;
-            font-size: 44px;
-            line-height: 1.36;
-            text-align: center;
-            vertical-align: top;
-            letter-spacing: 3px;
-            padding-bottom: 30px;
+        color: $whiteColor;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        text-align: center;
+        vertical-align: top;
+        letter-spacing: 3px;
+        padding-bottom: 30px;
     }
 
     &__button {
